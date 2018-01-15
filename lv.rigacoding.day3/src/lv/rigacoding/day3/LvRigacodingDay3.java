@@ -17,6 +17,11 @@ public class LvRigacodingDay3 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        TemperatureConverter convertion1 = new TemperatureConverter();
+      //SpeedCalculator calculations1 = new SpeedCalculator();  
+             
+      /*Scanner inputs!!
+        
         Scanner input = new Scanner(System.in);
         System.out.println("Ievadiet skaitli A:");
         
@@ -24,5 +29,19 @@ public class LvRigacodingDay3 {
         
         System.out.println("Jūsu ievadītā vērtība ir " + a);
     }
+    
+    public static void main4(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Ievadiet  vārdu: ");
+        String name = input.next();
+        System.out.println("Ievadiet uzvārdu: ");
+        String family = input.next();
+        
+        
+        System.out.println("Jūsu vārds ir " + name + " " + family);
+        */
+    }
+    
+    
     
 }
