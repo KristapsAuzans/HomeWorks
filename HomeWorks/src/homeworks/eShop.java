@@ -31,24 +31,40 @@ public class eShop {
 
         }
 
-        String name = input.next();
+        
         int totalPrice = 0;
+        boolean end = true;
+        
+        
         do {
             boolean isOk = false;
+           String name = input.next();
+            
             for (ProductDescription random1 : product) {
+                 
                 if (name == null ? random1.getName() == null : name.equals(random1.getName())) {
                     totalPrice =totalPrice + random1.getPrice();
                     System.out.println("Kopējā cena: " + totalPrice + " USD");
-                    String name2 = input.next();
+                    
+                    System.out.println("Izvēlies nākamo preci vai raksti '0', lai veiktu pirkumu ");
                     isOk = true;
-                    break;
+                    end = true;
+                    break;             
                 }
             }
-            if (isOk == false) {
+            
+               if (isOk == false && !"0".equals(name)) {
                 System.out.println("Nepareizi ievadīta prece, mēģini vēlreiz ");
+                end = true;
+                }
+               
+            if ("0".equals(name)){
+                end = false;
             }
-
-        } while (!"0".equals(name));
+                           
+                   
+                       
+        } while (end == true);
         System.out.println("Kopējā cena: " + totalPrice + " USD");
     }
 
